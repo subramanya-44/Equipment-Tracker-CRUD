@@ -12,14 +12,8 @@ The backend provides REST APIs to:
 - Delete equipment
 
 Frontend will be added later.
-```
 
-That’s it.
-No over-explanation. No marketing language.
 
----
-
-# ✅ Backend README (`backend/README.md`)
 
 ```
 # Backend
