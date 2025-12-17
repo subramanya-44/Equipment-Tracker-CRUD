@@ -1,0 +1,12 @@
+const express = require("express");
+const controller = require("../controllers/equipment.controller");
+
+const router = express.Router();
+
+// Equipment CRUD routes
+router.get("/", controller.getAll);
+router.post("/", controller.create);
+router.put("/:id", controller.update);
+router.delete("/:id", controller.remove);
+
+module.exports = router;
