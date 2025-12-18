@@ -25,7 +25,7 @@ The backend provides CRUD APIs to manage equipment records and stores data in My
 ## Project Structure
 
 ```
-
+```
 backend/
 ├── src/
 │   ├── app.js
