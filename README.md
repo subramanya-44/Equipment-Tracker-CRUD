@@ -27,14 +27,6 @@ This project was built as a take-home assignment.
 
 ---
 
-## Implementation Notes
-
-- The backend exposes only basic CRUD REST APIs.
-- Search, filter, and sort are implemented on the frontend using React state and plain JavaScript logic.
-- This approach keeps the backend simple and works well for small datasets.
-
----
-
 ## Project Structure
 
 ```
@@ -56,7 +48,7 @@ See `backend/README.md`
 ### Frontend
 See `frontend/README.md`
 ```
-
----
+```
+## Made by subramanya T N (tnsubramanya7@gmail.com / stn3086@gmail.com) 6363594637 for leucine as assignment 
 
 
