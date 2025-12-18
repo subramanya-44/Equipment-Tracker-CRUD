@@ -1,5 +1,5 @@
 
-# 📁 BACKEND README (`backend/README.md`)
+# BACKEND README (`backend/README.md`)
 
 ```
 # Backend – Equipment Tracker
@@ -18,7 +18,7 @@ The backend provides CRUD APIs to manage equipment records and stores data in My
 - mysql2
 - dotenv
 - cors
-- nodemon (development)
+- nodemon for dev
 
 ---
 
@@ -58,7 +58,7 @@ GET    /api/equipment
 POST   /api/equipment
 PUT    /api/equipment/:id
 DELETE /api/equipment/:id
-GET    /health
+
 
 ```
 
@@ -137,4 +137,3 @@ GET [http://localhost:5010/health](http://localhost:5000/health)
 - No authentication is implemented
 - Designed for simplicity and readability
 ```
----
