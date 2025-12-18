@@ -1,19 +1,38 @@
+
+ReadME
+
+```
 # Equipment Tracker
+![Image](Spa.png)
 
-This is a simple equipment tracker application.
+Equipment Tracker is a simple full-stack web application to manage equipment records.
 
-Right now, only the backend is implemented.
-The frontend (React) is not built yet.
+The goal of this project is to demonstrate:
+- clean REST API design
+- simple React frontend
+- clear project structure
+- readable, maintainable code
 
-The backend provides REST APIs to:
-- View equipment
-- Add equipment
-- Update equipment
+This project was built as a take-home assignment.
+
+---
+
+## Features
+
+- View equipment list
+- Add new equipment
+- Edit existing equipment
 - Delete equipment
 
 Frontend will be added later.
+```
 
+That’s it.
+No over-explanation. No marketing language.
 
+---
+
+# ✅ Backend README (`backend/README.md`)
 
 ```
 # Backend
@@ -25,44 +44,47 @@ It is built using:
 - Express
 - MySQL
 
-The backend exposes basic REST APIs to manage equipment data.
-```
+### Frontend
+- React (Vite)
+- Plain CSS (no UI libraries)
 
-### How to run
+---
 
-```
-npm install
-npm run dev
-```
-
-Server runs on:
+## Project Structure
 
 ```
-http://localhost:5000
-```
 
-### Database
-
-Create the database and table in MySQL:
-
-```
-CREATE DATABASE equipment_db;
-
-CREATE TABLE equipment (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(100),
-  type VARCHAR(50),
-  status VARCHAR(50),
-  last_cleaned_date DATE
-);
-```
-
-### APIs
+equipment-tracker/
+  backend/     
+  frontend/    
+  README.md
 
 ```
-GET    /api/equipment
-POST   /api/equipment
-PUT    /api/equipment/:id
-DELETE /api/equipment/:id
+
+---
+
+## How to Run the Project
+
+### 1. Start Backend
+See the [Backend README](backend/README.md)
+
+### 2. Start Frontend
+See the [Frontend README](frontend/README.md)
+
+---
+
+## Notes
+
+- Authentication is intentionally not included
+- UI is intentionally simple
+- Focus is on correctness and clarity over visual polish
 ```
+## Future Improvements
+The following features are planned but not implemented yet:
+
+- Search equipment by name
+- Filter equipment by type and status
+- Sort equipment by name or last cleaned date
+---
+
 
