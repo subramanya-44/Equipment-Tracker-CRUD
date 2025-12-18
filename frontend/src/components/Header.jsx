@@ -1,7 +1,7 @@
 function Header() {
   return (
     <div style={{
-      backgroundColor: "#000",
+      backgroundColor: "#252424ff",
       color: "#fff",
       padding: "16px",
       fontSize: "18px"

@@ -1,3 +1,5 @@
+import { formatDateToIndianTime } from "../utils/dateFormatter";
+
 function EquipmentTable({ items, onEdit, onDelete }) {
   return (
     <table>
@@ -13,7 +15,7 @@ function EquipmentTable({ items, onEdit, onDelete }) {
       <tbody>
         {items.map(item => (
           <tr key={item.id}>
-            <td><strong>{item.name}</strong></td>
+            <td>{item.name}</td>
             <td>{item.type}</td>
             <td>
               <span className={`status ${
@@ -26,10 +28,10 @@ function EquipmentTable({ items, onEdit, onDelete }) {
                 {item.status}
               </span>
             </td>
-            <td>{item.last_cleaned_date}</td>
+            <td>{formatDateToIndianTime(item.last_cleaned_date)}</td>
             <td>
-              <button className="icon" onClick={() => onEdit(item)}>✏️ Edit</button>
-              <button className="danger" onClick={() => onDelete(item.id)}>🗑</button>
+              <button className="icon" onClick={() => onEdit(item)}>Edit</button>
+              <button className="danger" onClick={() => onDelete(item.id)}>Delete</button>
             </td>
           </tr>
         ))}

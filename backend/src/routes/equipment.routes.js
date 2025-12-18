@@ -1,9 +1,7 @@
 const express = require("express");
+const router = express.Router();
 const controller = require("../controllers/equipment.controller");
 
-const router = express.Router();
-
-// Equipment CRUD routes
 router.get("/", controller.getAll);
 router.post("/", controller.create);
 router.put("/:id", controller.update);

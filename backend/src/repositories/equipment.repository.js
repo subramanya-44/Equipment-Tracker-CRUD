@@ -1,46 +1,44 @@
-const pool = require("../db/mysql");
+const db = require("../db/mysql");
 
-// Fetch all equipment records from database
 async function findAll() {
-  const [rows] = await pool.query("SELECT * FROM equipment");
+  const [rows] = await db.query(
+    "SELECT * FROM equipment ORDER BY id DESC"
+  );
   return rows;
 }
 
-// Fetch a single equipment by ID
 async function findById(id) {
-  const [rows] = await pool.query(
+  const [rows] = await db.query(
     "SELECT * FROM equipment WHERE id = ?",
     [id]
   );
   return rows[0];
 }
 
-// Insert a new equipment record
-async function create(equipment) {
-  const { name, type, status, lastCleanedDate } = equipment;
-
-  const [result] = await pool.query(
+async function create(data) {
+  const result = await db.query(
     "INSERT INTO equipment (name, type, status, last_cleaned_date) VALUES (?, ?, ?, ?)",
-    [name, type, status, lastCleanedDate]
+    [data.name, data.type, data.status, data.lastCleanedDate]
   );
 
-  // Return the created equipment with generated ID
-  return { id: result.insertId, ...equipment };
+  return {
+    id: result[0].insertId,
+    ...data
+  };
 }
 
-// Update existing equipment by ID
-async function update(id, equipment) {
-  const { name, type, status, lastCleanedDate } = equipment;
-
-  await pool.query(
-    "UPDATE equipment SET name=?, type=?, status=?, last_cleaned_date=? WHERE id=?",
-    [name, type, status, lastCleanedDate, id]
+async function update(id, data) {
+  await db.query(
+    "UPDATE equipment SET name = ?, type = ?, status = ?, last_cleaned_date = ? WHERE id = ?",
+    [data.name, data.type, data.status, data.lastCleanedDate, id]
   );
 }
 
-// Delete equipment by ID
 async function remove(id) {
-  await pool.query("DELETE FROM equipment WHERE id=?", [id]);
+  await db.query(
+    "DELETE FROM equipment WHERE id = ?",
+    [id]
+  );
 }
 
 module.exports = {
