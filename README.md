@@ -1,10 +1,10 @@
 
 ReadME
 
-```
+
 # Equipment Tracker
 ![Image](Spa.png)
-
+```
 Equipment Tracker is a simple full-stack web application to manage equipment records.
 
 The goal of this project is to demonstrate:
