@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-
-# FRONTEND README (`frontend/README.md`)
+# Frontend – Equipment Tracker
 
 ![Image](assets/spa.png)
 
 ![Image](assets/addequipment.png)
-
-
-```
-# Frontend – Equipment Tracker
 
 This folder contains the React frontend for the Equipment Tracker application.
 
@@ -22,6 +16,9 @@ The frontend is a simple single-page application that communicates with the back
 - Add new equipment
 - Edit existing equipment
 - Delete equipment
+- Search equipment by name
+- Filter equipment by type and status
+- Sort equipment by name or last cleaned date
 - Basic form validation
 - Clean card-based UI
 
@@ -32,7 +29,7 @@ The frontend is a simple single-page application that communicates with the back
 - React (Vite)
 - JavaScript
 - Plain CSS
-- Fetch API
+- Rest API
 
 No UI libraries or state management libraries are used.
 
@@ -56,6 +53,32 @@ frontend/
 └── package.json
 
 ```
+
+---
+
+## Search, Filter, and Sort
+
+### Search
+- Search is implemented by equipment name
+- Search runs only when the search button is clicked
+- No live search or prediction is used
+
+### Filter
+- Equipment can be filtered by:
+  - Type (Machine, Vessel, Tank, Mixer)
+  - Status (Active, Inactive, Under Maintenance)
+- Filters are grouped under a single **Filter** button
+- Filter changes apply immediately
+- If a filter value is set to `All`, it is ignored
+
+### Sort
+- Sorting options:
+  - Name (A–Z)
+  - Last cleaned date (newest first)
+- Sorting is grouped under a **Sort** button
+- Only one sort option can be active at a time
+
+All search, filter, and sort logic is handled on the frontend.
 
 ---
 
@@ -84,6 +107,7 @@ Vite will start the app on a local URL (usually `http://localhost:5173`).
 All API calls are defined in `src/api.js`.
 
 The frontend uses:
+
 ```
 
 GET    /api/equipment
@@ -95,117 +119,3 @@ DELETE /api/equipment/:id
 
 ---
 
-## Notes
-
-- All state is managed locally using React hooks
-- No routing is used since this is a small app
-- UI focuses on clarity and usability
-```
-
----
-=======
-
-# FRONTEND README (`frontend/README.md`)
-
-![Image](assets/spa.png)
-
-![Image](assets/addequipment.png)
-
-
-```
-# Frontend – Equipment Tracker
-
-This folder contains the React frontend for the Equipment Tracker application.
-
-The frontend is a simple single-page application that communicates with the backend REST APIs.
-
----
-
-## Features
-
-- Display equipment list in a table
-- Add new equipment
-- Edit existing equipment
-- Delete equipment
-- Basic form validation
-- Clean card-based UI
-
----
-
-## Tech Used
-
-- React (Vite)
-- JavaScript
-- Plain CSS
-- Fetch API
-
-No UI libraries or state management libraries are used.
-
----
-
-## Project Structure
-
-```
-
-frontend/
-├── src/
-│   ├── App.jsx
-│   ├── api.js
-│   ├── index.css
-│   ├── main.jsx
-│   └── components/
-│       ├── Header.jsx
-│       ├── EquipmentTable.jsx
-│       └── EquipmentForm.jsx
-├── index.html
-└── package.json
-
-```
-
----
-
-## How to Run Frontend
-
-### Prerequisites
-- Node.js installed
-- Backend running on `http://localhost:5001`
-
-### Steps
-
-```
-
-cd frontend
-npm install
-npm run dev
-
-```
-
-Vite will start the app on a local URL (usually `http://localhost:5173`).
-
----
-
-## How Frontend Talks to Backend
-
-All API calls are defined in `src/api.js`.
-
-The frontend uses:
-```
-
-GET    /api/equipment
-POST   /api/equipment
-PUT    /api/equipment/:id
-DELETE /api/equipment/:id
-
-```
-
----
-
-## Notes
-
-- All state is managed locally using React hooks
-- No routing is used since this is a small app
-- UI focuses on clarity and usability
-```
-
----
->>>>>>> 46e4654 (added search and sort)

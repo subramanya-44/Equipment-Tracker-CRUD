@@ -1,16 +1,7 @@
 
-<<<<<<< HEAD
-ReadME
-
-
-# Equipment Tracker
-![Image](Spa.png)
-```
-=======
 # Equipment Tracker
 ![Image](Spa.png)
 ![Image](features.png)
->>>>>>> 46e4654 (added search and sort)
 Equipment Tracker is a simple full-stack web application to manage equipment records.
 
 The goal of this project is to demonstrate:
